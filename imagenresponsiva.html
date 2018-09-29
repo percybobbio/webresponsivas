@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+      html {
+          width: 100%;
+          height: 100%;
+          background-image: url(herc1.jpg);
+          background-repeat: no-repeat;
+          background-size: cover;
+      }
+            /* del iphone */
+        @media (max-width: 480px) {
+           html {background-image: url("herc2.png"); background-size: contain;}     
+        }
+        /* del ipad en portrait*/
+        @media (min-width: 481px) and (max-width: 768px){
+            html {background-image: url("herc3.jpg"); background-size: 100%;} 
+        }
+        /* de computadora portatil*/
+        @media (min-width: 769px) and (max-width: 1024px){
+            html {background-image: url("deadpool.jpg"); background-size: cover;}
+        }
+        img {width:100%}
+    </style>
+</head>
+<body>
+
+</body>
+</html>

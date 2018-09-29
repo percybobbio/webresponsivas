@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        body {background: yellow;}
+        /* del iphone */
+        @media (max-width: 480px) {
+           body {background: blue;}     
+        }
+        /* del ipad en portrait*/
+        @media (min-width: 481px) and (max-width: 768px){
+            body {background: green;}
+        }
+        /* de computadora portatil*/
+        @media (min-width: 769px) and (max-width: 1024px){
+            body {background: orange;}
+        }
+        img {width:100%}
+    </style>
+</head>
+<body>
+    <img src="deadpool.jpg" alt="deadpool">
+</body>
+</html>
