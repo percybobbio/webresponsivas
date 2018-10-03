@@ -1,0 +1,33 @@
+body, article {
+    width: 320px;
+    height: auto;
+    background: #bcd5b0;
+}
+h1 {
+    font-size: 1.4em;
+}
+h2 {
+    font-size: 1.2em;
+}
+header {
+    height: 60px;
+}
+p {
+    line-height: 1.4em;
+    font-size: 0.8em;
+}
+nav {
+    font-size: 0.8em;
+    color: #f2e3b8;
+    text-align: center;
+    padding-top: 0.5em;
+}
+a {
+    text-align: left;
+    text-decoration: none;
+    letter-spacing: normal;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
