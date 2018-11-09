@@ -95,8 +95,42 @@ table {border-collapse: collapse;}
     h1 {font-size: 1.6em;}
     h2 {font-size: 1.4em;}
     header {height: 75px;}
-    p {line-height: 1.5em;
-    columns: 1;}
+    table {border: none;}
+    table, thead, th, td, tr {display: block;
+    }
+    thead tr {display: none;}
+    tr {
+        border: 1px solid gainsboro;
+        margin-bottom: 1em;
+    }
+    tr:nth-child(odd){
+        background: lightgray;
+    }
+    tr:nth-of-type(even){
+        background: #f2e3b6;
+    }
+    td {border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 25%;
+     }
+     td :before {
+         position: absolute;
+         top: 1px;
+         left: 1px;
+         width: 45%;
+         padding-right: 10px;
+         white-space: nowrap;
+     }
+     td:nth-of-type(1):before {
+         content: "Griego:";
+     }
+     td:nth-of-type(2):before {
+         content: "Romano:";
+     }
+     td:nth-of-type(3):before {
+         content: "Descripcion:";
+     }
     body, article, aside {width: 320px;}
     nav {
         font-size: .8em;
@@ -114,6 +148,11 @@ table {border-collapse: collapse;}
 @media only screen and (min-width: 481px) and (max-width: 768px){
     body, article, aside { width: 80%;}
     html {background-color: orange;}
+    table {font-size: 12px;}
+    tr:nth-child(odd) {background-color: lightgray;}
+    tr:nth-child(even) {background-color: lightblue;}
+    table thead tr:nth-child(n) {background-color: blue; color: red;}
+
 p {
     columns: 2;
     column-rule: 3px dotted black;
