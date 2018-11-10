@@ -6,6 +6,7 @@
     <title>Poseidon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
     <script src="main.js"></script>
 </head>
 <style>
@@ -86,51 +87,22 @@ ul, li {
 img {
     float: left;
     padding-right: 1em;
-    width: 100%;
 }
-table {border-collapse: collapse;}
+
 /*moviles*/
 @media only screen and (max-width: 480px){
     html {background-color: blue;}
-    h1 {font-size: 1.6em;}
+    img {
+        clear: both;
+        width: 290px;
+        margin-bottom: 10px;
+    }
+    h1 {font-size: 1.6em;
+        font-family: kavivanar;
+        }
     h2 {font-size: 1.4em;}
     header {height: 75px;}
-    table {border: none;}
-    table, thead, th, td, tr,tbody {display: block;
-    }
-    thead tr {display: none;}
-    tr {
-        border: 1px solid gainsboro;
-        margin-bottom: 1em;
-    }
-    tr:nth-child(odd){
-        background: lightgray;
-    }
-    tr:nth-of-type(even){
-        background: #f2e3b6;
-    }
-    td {border: none;
-        border-bottom: 1px solid #eee;
-        position: relative;
-        padding-left: 35%;
-     }
-     td:before {
-         position: absolute;
-         top: 1px;
-         left: 1px;
-         width: 45%;
-         padding-right: 10px;
-         white-space: nowrap;
-     }
-     td:nth-of-type(1):before {
-         content: "Griego:";
-     }
-     td:nth-of-type(2):before {
-         content: "Romano:";
-     }
-     td:nth-of-type(3):before {
-         content: "Descripcion:";
-     }
+    p {line-height: 1.5em;}
     body, article, aside {width: 320px;}
     nav {
         font-size: .8em;
@@ -148,17 +120,7 @@ table {border-collapse: collapse;}
 @media only screen and (min-width: 481px) and (max-width: 768px){
     body, article, aside { width: 80%;}
     html {background-color: orange;}
-    table {font-size: 12px;}
-    tr:nth-child(odd) {background-color: lightgray;}
-    tr:nth-child(even) {background-color: lightblue;}
-    table thead tr:nth-child(n) {background-color: blue; color: red;}
 
-p {
-    columns: 2;
-    column-rule: 3px dotted black;
-    column-gap: 20px;
-}
-}
 /*escritorio*/
 @media only screen and (min-width: 769px){
 }
@@ -166,46 +128,18 @@ p {
 <body>
     <header>
         <h1>Historia de Grecia</h1>
-        <h2>Poseidon</h2>
+        <h2>Registro</h2>
     </header>
     <section>
-        <table border="1" width=100%>
-            <thead>
-                <tr>
-                    <td><strong>Nombre Griego</strong></td>
-                    <td><strong>Nombre Romano</strong></td>
-                    <td><strong>Atributo</strong></td>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Cronos</td>
-                    <td>Saturno</td>
-                    <td>Dios del tiempo</td>
-                </tr>
-                <tr>
-                    <td>Gea</td>
-                    <td>Tellus</td>
-                    <td>Diosa de la Tierra</td>
-                </tr>
-                <tr>
-                    <td>Zeus</td>
-                    <td>Jupiter</td>
-                    <td>Dios del Universo</td>
-                </tr>
-                <tr>
-                    <td>Hera</td>
-                    <td>Juno</td>
-                    <td>Diosa del Matrimonio</td>
-                </tr>
-                <tr>
-                    <td>Atenea</td>
-                    <td>Minerva</td>
-                    <td>Diosa de la sabiduria</td>
-                </tr>
-            </tbody>
-        </table>
+    <form action="">
+        <article>
+            <section id="forma1">
+            
+            </section>
+        </article>
+    </form>
     </section>
+    
     <footer>
         <h3>
             Todos los derechos reservados &copy;
@@ -225,7 +159,7 @@ p {
                 </li>    
             </ul>
         </nav>
-    </h3>
+        </h3>
     </footer>
 </body>
 </html>
