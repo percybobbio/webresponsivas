@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Galeria responsiva</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+    }
+    .colummna {
+        float: left;
+        width: 25%;
+        padding: 10px;
+    }
+    .colummna img{
+        opacity: 0.8;
+        cursor: pointer;
+    }
+    .colummna img:hover{
+        opacity: 1;
+    }
+    h2 {
+        text-align: center;
+    }
+    .renglon::after {
+        content: " ";
+        display: table;
+        clear: both;
+    }
+    .contenido{
+        position: relative;
+        display: none;
+    }
+    #texto {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        color: orange;
+        font-size: 30px;
+    }
+    .cerrar {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: rebeccapurple;
+        font-size: 35px;
+        cursor: pointer;
+    }
+    </style>
+    <script>
+        function despliega(img) {
+            var imagen = document.getElementById("imagen");
+            var texto  = document.getElementById("texto")
+            imagen.src=img.src;
+            texto.innerHTML=img.alt;
+            imagen.parentElement.style.display="block";
+        }        
+    </script>
+<body>
+    <h2>Galeria responsiva</h2>
+    <div class="renglon">
+        <div class="colummna">
+            <img src="15-Perseo.jpg" alt="15-Perseo" width="100%" onclick="despliega(this)">
+        </div>
+        <div class="colummna">
+            <img src="herc1.jpg" alt="herc1" width="100%" onclick="despliega(this)">
+        </div>
+        <div class="colummna">
+            <img src="herc2.png" alt="herc2" width="100%" onclick="despliega(this)">
+        </div>
+        <div class="colummna">
+            <img src="herc3.jpg" alt="herc3" width="100%" onclick="despliega(this)">
+        </div>
+    </div>
+    <div class="contenido">
+        <span onclick="this.parentElement.style.display='none'" class="cerrar">&times;</span>
+        <img id="imagen" width="100%">
+        <div id="texto"></div>
+    </div>
+</body>
+</html>

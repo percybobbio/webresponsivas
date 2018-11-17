@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/formatomenu.css" />
+    <script src="main.js"></script>
+    <script>
+        window.onload = function(){
+            document.getElementById("boton").onclick=function(){
+                var mimenu = document.getElementById("mimenu");
+                if(mimenu.className==="menu"){
+                    mimenu.className += " responsivo";
+                }
+                else{
+                    mimenu.className = "menu";
+                }
+            }
+        }
+    
+    </script>
+</head>
+<body>
+    <div class="menu" id="mimenu">
+        <a href="#" class="activo">Inicio</a>
+        <a href="#">Cursos</a>
+        <a href="#">Libros</a>
+        <a href="#">Contactos</a>
+        <a href="#" id="boton" class="icono">&#9776;</a>
+    </div>
+    <img src="deadpool.jpg" alt="foto">
+</body>
+</html>

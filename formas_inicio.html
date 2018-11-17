@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Poseidon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/forma.css" />
     <link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet">
-    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/forma.js"></script>
 </head>
 <style>
 header,section,nav,footer,article {
@@ -21,7 +22,7 @@ html, body, h1, h2, h3, h4, h5, h6, p {
 }
 html {background: #fff}
 body {
-    width: 960px;
+    width: 1000px;
     margin: 0 auto;
     background: whitesmoke;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -83,6 +84,7 @@ a {
 /*Clases*/
 ul, li {
     display: inline;
+    align-content: center;
 }
 img {
     float: left;
@@ -97,13 +99,15 @@ img {
         width: 290px;
         margin-bottom: 10px;
     }
-    h1 {font-size: 1.6em;
+    h1 {
+        font-size: 1.6em;
         font-family: kavivanar;
         }
-    h2 {font-size: 1.4em;}
+    h2 {font-size: 1em;}
     header {height: 75px;}
     p {line-height: 1.5em;}
-    body, article, aside {width: 320px;}
+    body {width: 400px;} 
+    article, aside {width: 100%;}
     nav {
         font-size: .8em;
         color: #f2e3b6;
@@ -131,15 +135,66 @@ img {
         <h2>Registro</h2>
     </header>
     <section>
-    <form action="">
+    <form>
         <article>
             <section id="forma1">
-            
+                <label for="nombre" class="inputbox">nombre:</label>
+                <input type="text" id="nombre" placeholder="Su Nombre" required class="inputbox" autofocus>
+                <label for="email" class="inputbox">Su Correo:</label>
+                <input type="email" id="email" placeholder="Su correo" required class="inputbox">
+                <label for="url" class="inputbox">Su pagina web:</label>
+                <input type="url" name="url" id="url" placeholder="Su pagina web" class='inputbox'>
+                <label for="telefono" class="inputbox">Su telefono:</label>
+                <input type="tel" name="tel" id="telefono" placeholder="Su numero de telefono" class="inputbox">            
+            </section>
+
+            <section id="mensaje">
+                <label for="mensaje" class="inputbox">Su mensaje:</label>
+                <textarea name="mensaje" id="mensaje" required class="inputbox"></textarea>
             </section>
         </article>
+
+        <aside class="clearfix">
+            <section id="forma2">
+                <h2>Tema del mensaje</h2>
+                <select name="msgtema" id="msgtema" required class="inputbox">
+                    <option selected></option>
+                    <option>Pregunta sobre libro</option>
+                    <option>Diseño web</option>
+                    <option>Consultoria</option>
+                    <option>Colaboracion</option>
+                    <option value="articulo">Correccion del articulo</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <label for="articulo-url" class="inputbox hide">URL que necesita correccion</label>
+                <input type="url" name="url" id="articulo-url" placeholder="URL que necesita correccion" class="inputbox hide">
+                <label for="otro" class="inputbox hide">¿Cual es el problema?</label>
+                <input type="text" id="otro" placeholder="¿Cual es el tema de la consulta?" maxlength="200" class="inputbox hide">
+            </section>
+            <section id="prioridad">
+                <h2>Prioridad</h2>
+                <p>
+                    <input type="radio" name="prioridad" id="alta" value="alta">
+                    <label for="alta" class="radio">Alta</label>                
+                </p>
+                <p>
+                    <input type="radio" name="prioridad" id="media" value="media" checked>
+                    <label for="media" class="radio">Media</label>
+                </p>
+                <p>
+                    <input type="radio" name="prioridad" id="baja" value="baja">
+                    <label for="baja" class="radio">Baja</label>
+                </p>
+            </section>
+        </aside>
+        <section id="botones">
+            <input type="reset" value="reset">
+            <input type="submit" value="submit">
+        </section>
     </form>
     </section>
-    
+
     <footer>
         <h3>
             Todos los derechos reservados &copy;
