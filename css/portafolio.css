@@ -1,0 +1,38 @@
+*{box-sizing: border-box;}
+body{
+    padding: 20px;
+    background-color: gray;
+}
+.contenido{
+    max-width: 960px;
+    margin: auto;
+}
+h1{
+    font-size: 3em;
+    text-align: center;
+}
+.renglon{
+    margin: 8px -16px;
+}
+.renglon, .renglon> .columna{
+    padding: 0.5em;
+}
+.columna{
+    float: left;
+    width: 25%;
+}
+.renglon::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.contenidocolumna{
+    background-color: white;
+    padding: .8em;
+}
+@media screen and (max-width:900px) {
+    .columna{width: 50%;}
+}
+@media screen and (max-width:600px) {
+    .columna{width: 100%;}
+}

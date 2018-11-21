@@ -12,16 +12,19 @@ function foto(n) {
 function muestrafoto(n) {
     var i
     var fotos = document.getElementsByClassName("foto")
-    var bolitas = document.getElementsByClassName("bolita")
-    console.log(bolitas.length)
-    if (n>fotos.length) index = 1;
+    var muestras = document.getElementsByClassName("muestra")
+    var texto = document.getElementById("texto")
+    console.log(muestras.length)
+    if (n>fotos.length) index = 1
     if (n<1) index = fotos.length
+    /*Apagar visualizacion de fotos grandes*/
     for (var i = 0; i < fotos.length; i++) {
         fotos[i].style.display = "none";        
     }
-    for (var i = 0; i < bolitas.length; i++) {
-        bolitas[i].className = bolitas.className.replace("activo","none");        
+    for (var i = 0; i < muestras.length; i++) {
+        muestras[i].className = muestras.className.replace("activo","none");        
     }
     fotos[index-1].style.display="block"
-    bolitas[index-1].className += " activo"
+    muestras[index-1].className += " activo"
+    texto.innerHTML = muestras[index-1].alt
 }
