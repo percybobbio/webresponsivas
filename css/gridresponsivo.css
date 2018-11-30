@@ -1,0 +1,28 @@
+.wrapper{
+    padding-left: 1em;
+    padding-right: 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.renglon::after{
+    content: " ";
+    clear: both;
+    display: block;
+}
+[class*="col-span"]{
+    float: left;
+    box-sizing: border-box;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.sm-col-span-1 {width: 25%;}
+.sm-col-span-2 {width: 50%;}
+.sm-col-span-3 {width: 75%;}
+.sm-col-span-4 {width: 100%;}
+
+@media screen and (min-width:768px){
+    lg-span-1{width: 25%;}
+    lg-span-2{width: 50%;}
+    lg-span-3{width: 75%;}
+    lg-span-4{width: 100%;}
+}
