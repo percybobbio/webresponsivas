@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Uso de JS en paginas responsivas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        window.onload = function () {
+            columnas();
+            //detectamos cuando el ancho del viewport es modificado
+            window.addEventListener("resize",columnas, true);
+        }
+        function columnas (){
+            var columnas_array = document.getElementsByClassName("col");
+            var h = 0;
+            //limpiar las alturas de las columnas
+            for (var i=0; i<columnas_array.length; i++){
+                columnas_array[i].style.height = "auto";
+            }
+            //obtenemos la altura mayor de las columnas
+            for (var i= 0; i < columnas_array.length; i++) {
+                if (h<columnas_array[i].clientHeight) {
+                h=columnas_array[i].clientHeight                    
+                }  
+            }
+            //aplicamos la altura mayor a cada columna
+            for (var i=0; i<columnas_array.length; i++){
+            columnas_array[i].style.height = h+"px";}
+        }
+    </script>
+    <style>
+        .contenedor{
+            color: white;
+        }
+        .contenedor::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .col{
+            float: left;
+            width: 33.33%;
+        }
+        .col.izq{
+            background-color: gray;
+        }
+        .col.main{
+            background-color: black;
+        }
+        .col.der{
+            background-color: gray;
+        }
+    </style>  
+</head>
+<body>
+    <div class="contenedor">
+        <aside class="col izq">lado izquierdo</aside>
+        <article class="col main">
+            Aqui va el texto principal de la pagina responsiva
+        </article>
+        <aside class="col der">lado derecho</aside>
+    </div>
+</body>
+</html>

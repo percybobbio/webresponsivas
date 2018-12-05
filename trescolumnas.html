@@ -32,24 +32,34 @@ header  {
     height: 90px;
     background: #76a68b;
 }
+section{overflow: hidden;}
  #col1 {
-    height: 460px;
+    height: auto;
     background: #bcd5b0;
-    width: 33.33%;
+    width: 25%;
     float: left;
 }
  #col2 {
-    height: 460px;
+    height: auto;
     background: #bcd5b0;
-    width: 33.33%;
+    width: 50%;
     float: left;
 }
 #col3 {
-    height: 460px;
+    height: auto;
     background: #bcd5b0;
-    width: 33.33%;
+    width: 25%;
     float: left;
 }
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+/*#col1, #col2, #col3 {
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+}*/
 footer  {
     clear: both;
     height: 60px;
