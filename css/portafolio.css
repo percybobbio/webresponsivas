@@ -4,7 +4,7 @@ body{
     background-color: gray;
 }
 .contenido{
-    max-width: 960px;
+    max-width: 1000px;
     margin: auto;
 }
 h1{
@@ -14,21 +14,21 @@ h1{
 .renglon{
     margin: 8px -16px;
 }
-.renglon, .renglon> .columna{
-    padding: 0.6em;
+.renglon, .renglon > .columna{
+    padding: 0.5em;
 }
 .columna{
     float: left;
     width: 25%;
 }
-.renglon::after{
+.renglon:after{
     content: "";
     display: table;
     clear: both;
 }
 .contenidocolumna{
     background-color: white;
-    padding: .8em;
+    padding: .5em;
 }
 @media screen and (max-width:900px) {
     .columna{width: 50%;}

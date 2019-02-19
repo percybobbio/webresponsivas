@@ -15,9 +15,9 @@ function muestrafoto(n) {
     var muestras = document.getElementsByClassName("muestra")
     var texto = document.getElementById("texto")
     console.log(muestras.length)
-    if (n>fotos.length) index = 1
+    if (n>fotos.length) index = 1;
     if (n<1) index = fotos.length
-    /*Apagar visualizacion de fotos grandes*/
+    /*Apagar la visualizacion de fotos grandes*/
     for (var i = 0; i < fotos.length; i++) {
         fotos[i].style.display = "none";        
     }
@@ -26,5 +26,5 @@ function muestrafoto(n) {
     }
     fotos[index-1].style.display="block"
     muestras[index-1].className += " activo"
-    texto.innerHTML = muestras[index-1].alt
+    texto.innerHTML = muestras[index-1].alt;
 }

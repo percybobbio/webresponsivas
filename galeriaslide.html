@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Galeria y Slideshow responsivos</title>
+    <title>Galeria y slideshow responsivos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/galeriaslide.css" />
     <script src="js/galeriaslide.js"></script>
@@ -12,65 +12,63 @@
     <div class="contenedor">
         <div class="foto">
             <div class="numero">1/6</div>
-            <img src="fotos/grecia/grecia1.jpg" alt="foto1" width="100%">
+            <img src="fotos/grecia/grecia1.jpg" alt="" width="100%">
         </div>
+    </div>
+    <div class="contenedor">
         <div class="foto">
             <div class="numero">2/6</div>
-            <img src="fotos/grecia/grecia2.jpg" alt="foto2" width="100%">
+            <img src="fotos/grecia/grecia2.jpg" alt="" width="100%">
         </div>
+    </div>
+    <div class="contenedor">
         <div class="foto">
             <div class="numero">3/6</div>
-            <img src="fotos/grecia/grecia3.jpg" alt="foto3" width="100%">
+            <img src="fotos/grecia/grecia3.jpg" alt="" width="100%">
         </div>
+    </div>
+    <div class="contenedor">
         <div class="foto">
             <div class="numero">4/6</div>
-            <img src="fotos/grecia/grecia4.jpeg" alt="foto4" width="100%">
+            <img src="fotos/grecia/grecia4.jpeg" alt="" width="100%">
         </div>
-            <div class="foto">
+    </div>
+    <div class="contenedor">
+        <div class="foto">
             <div class="numero">5/6</div>
-            <img src="fotos/grecia/grecia5.jpeg" alt="foto5" width="100%">
+            <img src="fotos/grecia/grecia5.jpeg" alt="" width="100%">
         </div>
-            <div class="foto">
+    </div>
+    <div class="contenedor">
+        <div class="foto">
             <div class="numero">6/6</div>
-            <img src="fotos/grecia/grecia6.jpg" alt="foto6" width="100%">
+            <img src="fotos/grecia/grecia6.jpg" alt="" width="100%">
         </div>
+    </div>
+    <a class="antes" onclick="mueve(-1)">&#10094;</a>
+    <a class="despues" onclick="mueve(1)">&#10095;</a>
 
-        <a class="antes" onclick="mueve(-1)">&#10094;</a>
-        <a class="despues" onclick="mueve(1)">&#10095;</a>
-        
-        <div class="contenedortexto">
-            <p id="texto"></p>
+    <div class="contenedortexto">
+        <p id="texto"></p>
+    </div>
+    <div class="renglon">
+        <div class="columna">
+            <img class="muestra cursor" src="fotos/imagen1.jpg" alt="Partenon de dia" width="100%" onclick="foto(1)">
         </div>
-
-        <div class="renglon">
-                <div class="columna">
-                    <img src="fotos/grecia/grecia1.jpg" alt="El partenon de dia" class="muestra cursor" width="100%" onclick=foto(1)">
-            </div>         
+        <div class="columna">
+            <img class="muestra cursor" src="fotos/imagen2.jpg" alt="Partenon de dia" width="100%" onclick="foto(2)">
         </div>
-        <div class="renglon">
-                <div class="columna">
-                    <img src="fotos/grecia/grecia2.jpg" alt="El partenon de noche" class="muestra cursor" width="100%" onclick=foto(2)">
-                </div>         
+        <div class="columna">
+            <img class="muestra cursor" src="fotos/imagen3.jpg" alt="Partenon de dia" width="100%" onclick="mfoto(3)">
         </div>
-        <div class="renglon">
-                <div class="columna">
-                    <img src="fotos/grecia/grecia3.jpg" alt="playa" class="muestra cursor" width="100%" onclick=foto(3)">
-                </div>         
+        <div class="columna">
+            <img class="muestra cursor" src="fotos/imagen1.jpg" alt="Partenon de dia" width="100%" onclick="mfoto(4)">
         </div>
-        <div class="renglon">
-                <div class="columna">
-                    <img src="fotos/grecia/grecia4.jpeg" alt="casa" class="muestra cursor" width="100%" onclick=foto(4)">
-                </div>         
+        <div class="columna">
+            <img class="muestra cursor" src="fotos/imagen2.jpg" alt="Partenon de dia" width="100%" onclick="mfoto(5)">
         </div>
-        <div class="renglon">
-                <div class="columna">
-                    <img src="fotos/grecia/grecia5.jpeg" alt="cueva" class="muestra cursor" width="100%" onclick=foto(5)">
-                 </div>
-        <div class="renglon">
-                <div class="columna">
-                    <img src="fotos/grecia/grecia6.jpg" alt="bosque" class="muestra cursor" width="100%" onclick=foto(6)">
-                </div>         
-        </div>         
+        <div class="columna">
+            <img class="muestra cursor" src="fotos/imagen3.jpg" alt="Partenon de dia" width="100%" onclick="mfoto(6)">
         </div>
     </div>
 </body>
