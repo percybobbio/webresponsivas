@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Submenu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+        .opcion{
+            background-color: orange;
+            color: white;
+            padding: 16px;
+            font-size: 1em;
+            border: none;
+        }
+        .menu{
+            position: relative;
+            display: inline-block;
+        }
+        .submenu{
+            display: none;
+            position: absolute;
+            background-color: gray;
+            min-width: 180px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .submenu a{
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .submenu a:hover{
+            background-color: #ddd;
+        }
+        .menu:hover .submenu{
+            display: block;
+        }
+        .menu:hover .opcion{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>Submenu</h2>
+    <div class="menu">
+        <button class="opcion">Cursos</button>
+        <div class="submenu">
+            <a href="#">Javascript</a>
+            <a href="#">Estilos en cascada</a>
+            <a href="#">Paginas responsivas</a>
+        </div>
+    </div>
+</body>
+</html>

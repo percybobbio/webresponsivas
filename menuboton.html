@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Menu responsivo con caja de busqueda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/fonts-awesome/4.7.0/css/fonts-awesome.min.css">
+    <script src="main.js"></script>
+</head>
+<style>
+body{
+    margin: 0;
+}
+.menu {
+    overflow: hidden;
+    background-color: beige;
+}
+.menu a{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.menu a:hover{
+    background-color: blue;
+    color: black;
+}
+.activo{
+    background-color: orange;
+    color: white;
+}
+.menu .buscar{
+    float: right;
+}
+.menu input[type=text]{
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+.menu .buscar button{
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background-color: gray;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+.menu .buscar button:hover{
+    background: grey;
+}
+@media screen and (max-width:600px){
+    .menu .buscar{
+        float: none;
+    }
+    .menu a, .menu input[type=text], .menu .busca button{
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .menu input[type=text]{
+        border: 1px solid gray;
+    }
+}
+</style>
+<script>
+    window.onload = function(){
+        document.getElementById("boton").onclick=function(){
+            var mimenu = document.getElementById("mimenu");
+            if(mimenu.className==="menu"){
+                mimenu.className+=" responsivo";
+            } else {
+                mimenu.className = "menu";
+            }
+        }
+    }
+</script>
+<body>
+    <div class="menu" id="mimenu">
+        <a href="#" class="activo">Inicio</a>
+        <a href="#">Cursos</a>
+        <a href="#">Libros</a>
+        <a href="#">Contacto</a>
+        <div class="buscar">
+           <form action="#">
+               <input type="text" name="buscar" id="" placeholder="buscar....">
+               <button type="submit">
+                   <i class="fa fa-search"></i>
+               </button>
+           </form>     
+        </div>
+    </div>
+    <img src="fotos/imagen1.jpg" alt="" width="100%">
+</body>
+</html>

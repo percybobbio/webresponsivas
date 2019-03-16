@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Menu deslizable</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<style>
+    .menu{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: black;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    .menu a{
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 2em;
+        color: white;
+        display: block;
+        transition: 0.5s;
+    }
+    .menu a:hover{
+        color: gray;
+    }
+    .menu .cerrar{
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 2em;
+        margin-left: 50px;
+    }
+    .abremenu {
+        font-size: 2em;
+        cursor: pointer;
+    }
+    @media screen and (max-height:450px){
+        .menu{
+            padding-top: 15px;
+        }
+        .menu a{
+            font-size: 18px;
+        }
+    }
+</style>
+
+<script>
+    window.onload = function(){
+        document.getElementById("abre").onclick = function (){
+            document.getElementById("mimenu").style.width="250px";
+        }
+        document.getElementById("cerrarmenu").onclick = function(){
+            document.getElementById("mimenu").style.width=0;
+        }
+    }
+</script>
+<body>
+    <div class="menu" id="mimenu">
+        <a href="#" class="cerrar" id="cerrarmenu">&times;</a>
+        <a href="#">Inicio</a>
+        <a href="#">Cursos</a>
+        <a href="#">Libros</a>
+        <a href="#">Contactos</a>
+    </div>
+    <h2>Menu deslizable</h2>
+    <span class="abremenu" id="abre">&#9776; Menu</span>
+</body>
+</html>

@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+}
+.encabezado{
+    background-color: orange;
+    padding: 30px;
+    text-align: center;
+}
+#menu{
+    overflow: hidden;
+    background-color: black;
+}
+#menu a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1em;
+}
+#menu a:hover{
+    background-color: gray;
+}
+#menu a.activo{
+    background-color: orange;
+}
+.contenido{
+    padding: 1em;
+    font-size: 1.8em;
+}
+.fijar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.fijar + .contenido{
+    padding-top: 60px;
+}

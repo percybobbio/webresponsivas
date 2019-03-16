@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Menu fijo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<style>
+    .menu{
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: orange;
+        color: white;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+    .menu a{
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 26px;
+        color: gray;
+        display: block;
+    }
+    .menu a:hover{
+        color: white;
+    }
+    .contenido{
+        margin-left: 160px;
+        font-size: 2em;
+        padding: 0 10px;
+    }
+    @media screen and (max-height: 450px){
+        .menu {
+            padding-top: 16px;
+        }
+        .menu a{
+            font-size: 18px;
+        }
+    }
+</style>
+<body>
+    <div class="menu">
+        <a href="#">Inicio</a>
+        <a href="#">Cursos</a>
+        <a href="#">Libros</a>
+        <a href="#">Contacto</a>
+    </div>
+    <div class="contenido">
+        <h2>contenido</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate, aliquid voluptas itaque quos suscipit tenetur ipsum quas cum perferendis ipsa, odit cupiditate, tempora fuga perspiciatis vitae! Autem doloribus quasi earum!</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa quisquam, earum sint quam debitis illum tenetur labore laborum! Cumque deserunt quasi, tempora assumenda labore quaerat consequatur illum expedita. Eaque, iusto!</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptates minus aut cupiditate, consectetur, error itaque reiciendis commodi, quibusdam tenetur adipisci magni dolorum inventore obcaecati. Quia nam vero ex maxime.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis explicabo laudantium illum velit fugiat, vero eos, minus dolorum, id quis aliquam. Id explicabo ab tempore! Eaque dolore vel ad quis.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptates minus aut cupiditate, consectetur, error itaque reiciendis commodi, quibusdam tenetur adipisci magni dolorum inventore obcaecati. Quia nam vero ex maxime.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis explicabo laudantium illum velit fugiat, vero eos, minus dolorum, id quis aliquam. Id explicabo ab tempore! Eaque dolore vel ad quis.</p>
+    </div>
+</body>
+</html>
